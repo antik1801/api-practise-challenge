@@ -32,3 +32,44 @@ const data = [
       
     },
   ];
+  const displayData = async (data) => {
+      console.log(data);
+      if(data.name==='Honda Sedan' || data.name === 'MitoSedan'){
+       
+      
+      const child = document.createElement('div');
+      child.classList.add('col','px-5');
+      child.innerHTML = `
+      <div class="card h-100">
+      <img src="${data.imageURL ? data.imageURL : ''}" class="card-img-top" alt="...">
+      <div class="card-body">
+      <h5 class="card-title">Card Name: ${data.name}</h5>
+      <p class="card-text">Description: ${data.description}</p>
+      <button class="btn btn-primary">Car Price : ${data.price}</button>
+      </div>
+
+    </div>
+      `
+      parent.appendChild(child);
+    }
+  }
+const parent = document.getElementById('parent');
+for (const items of data) {
+    displayData(items);
+}
+
+
+/*
+const child = document.createElement('div');
+  child.classList.add('col');
+  child.innerHTML=`
+  <div class="card h-100">
+  <img src="${data[0].imageURL}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  </div>
+  `
+  parent.appendChild(child);
+  */
