@@ -28,3 +28,24 @@ const person = {
       },
     ]
   };
+
+
+  console.log(person);
+  document.getElementById('person-name-1').innerText=`
+  ${person.result[0].name.common}
+  `
+  document.getElementById('age-1').innerText=`
+  ${person.result[0].age}
+  `
+  document.getElementById('address-1').innerText =`
+  ${person.result[0].address.street}  Hosue no- ${person.result[0].address.house}
+  `
+  document.getElementById('person-name-2').innerText=`
+  ${person.result[1].name.common}
+  `
+  document.getElementById('age-2').innerText=`
+  ${person.result[1].age}
+  `
+  document.getElementById('address-2').innerText =`
+  ${person.result[1].address.street}  Hosue no- ${person.result[0].address.house}
+  `
